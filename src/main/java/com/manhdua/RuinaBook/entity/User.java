@@ -37,12 +37,6 @@ public class User {
     @Column(nullable = false)
     boolean isActive;
 
-    @CreationTimestamp
-    LocalDateTime createdAt;
-
-    @UpdateTimestamp
-    LocalDateTime updatedAt;
-
     String fullName;
     LocalDate dob;
 
@@ -50,4 +44,11 @@ public class User {
     Gender gender;
 
     String avatarUrl;
+
+    @CreationTimestamp
+    LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    LocalDateTime updatedAt;
+
 }
