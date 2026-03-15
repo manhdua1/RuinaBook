@@ -1,5 +1,6 @@
 package com.manhdua.RuinaBook.entity;
 
+import com.manhdua.RuinaBook.enums.Gender;
 import com.manhdua.RuinaBook.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -40,4 +42,12 @@ public class User {
 
     @UpdateTimestamp
     LocalDateTime updatedAt;
+
+    String fullName;
+    LocalDate dob;
+
+    @Enumerated(EnumType.STRING)
+    Gender gender;
+
+    String avatarUrl;
 }
